@@ -1,0 +1,17 @@
+   <h1 id="firstHeading" class="firstHeading">static_assert</h1>            <table class="t-dcl-begin"> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;assert.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dcl"> <td class="t-dcl-nopad"> <pre data-language="c">#define static_assert _Static_assert</pre>
+</td> <td class="t-dcl-nopad"> </td> <td class="t-dcl-nopad"> </td> </tr>  </table> <p>This convenience macro expands to the keyword <a href="../keyword/_static_assert" title="c/keyword/ Static assert">_Static_assert</a>.</p>
+<h3 id="Example">Example</h3> <div class="t-example"> <div class="c source-c"><pre data-language="c">#include &lt;assert.h&gt;
+int main(void)
+{
+    static_assert(2 + 2 == 4, "2+2 isn't 4");      // well-formed
+    static_assert(sizeof(int) &lt; sizeof(char),
+                 "this program requires that int is less than char"); // compile-time error
+}</pre></div> </div> <h3 id="References">References</h3>  <ul>
+<li> C11 standard (ISO/IEC 9899:2011): </li>
+<ul><li> 7.2/3 Diagnostics &lt;assert.h&gt; (p: 186) </li></ul>
+</ul>   <h3 id="See_also">See also</h3>           <div class="_attribution">
+  <p class="_attribution-p">
+    &copy; cppreference.com<br>Licensed under the Creative Commons Attribution-ShareAlike Unported License v3.0.<br>
+    <a href="http://en.cppreference.com/w/c/error/static_assert" class="_attribution-link">http://en.cppreference.com/w/c/error/static_assert</a>
+  </p>
+</div>

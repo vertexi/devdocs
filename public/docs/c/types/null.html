@@ -1,0 +1,31 @@
+   <h1 id="firstHeading" class="firstHeading">NULL</h1>            <table class="t-dcl-begin"> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;stddef.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;string.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;wchar.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;time.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;locale.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;stdio.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;stdlib.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dcl"> <td class="t-dcl-nopad"> <pre data-language="c">#define NULL /*implementation-defined*/</pre>
+</td> <td class="t-dcl-nopad"> </td> <td class="t-dcl-nopad"> </td> </tr>  </table> <p>The macro <code>NULL</code> is an implementation-defined null pointer constant, which may be.</p>
+<ul>
+<li> an integer <a href="../language/constant_expression#Integer_constant_expression" title="c/language/constant expression">constant expression</a> with the value <code>​0​</code> </li>
+<li> an integer constant expression with the value 0 <a href="../language/conversion#Pointer_conversions" title="c/language/conversion">cast to the type</a> <code>void*</code> </li>
+</ul> <p>A null pointer constant may be <a href="../language/conversion#Pointer_conversions" title="c/language/conversion">converted</a> to any pointer type; such conversion results in the null pointer value of that type.</p>
+<h3 id="Possible_implementation">Possible implementation</h3> <table class="eq-fun-cpp-table"> <tr> <td> <div class="c source-c"><pre data-language="c">// C++ compatible:
+#define NULL 0
+// C++ incompatible:
+#define NULL (10*2 - 20)
+#define NULL ((void*)0)</pre></div> </td>
+</tr>
+</table> <h3 id="Example">Example</h3> <div class="t-example"> <div class="c source-c"><pre data-language="c">#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+int main(void)
+{    
+    // any kind of pointer can be set to NULL
+    int* p = NULL;
+    struct S *s = NULL;
+    void(*f)(int, double) = NULL;
+ 
+    // many pointer-returning functions use null pointers to indicate error
+    char *ptr = malloc(10);
+    if (ptr == NULL) printf("Out of memory");
+    free(ptr);
+}</pre></div> </div> <h3 id="See_also">See also</h3>           <div class="_attribution">
+  <p class="_attribution-p">
+    &copy; cppreference.com<br>Licensed under the Creative Commons Attribution-ShareAlike Unported License v3.0.<br>
+    <a href="http://en.cppreference.com/w/c/types/NULL" class="_attribution-link">http://en.cppreference.com/w/c/types/NULL</a>
+  </p>
+</div>

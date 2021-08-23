@@ -1,0 +1,19 @@
+   <h1 id="firstHeading" class="firstHeading">Conformance</h1>            <p><i>Conformance</i> has a three-fold definition:</p>
+<ul>
+<li> <i>strictly conforming program</i> - uses only well-defined language constructs, that is constructs with a single behavior. It excludes unspecified, undefined, or implementation-defined behavior, and does not exceed any minimum implementation limit. </li>
+<li> <i>conforming program</i> - acceptable to a conforming implementation. </li>
+<li> <i>conforming implementation</i> - A conforming hosted implementation shall accept any strictly conforming program. A conforming freestanding implementation shall accept any strictly conforming program in which the use of the features specified in the library clause (clause 7) is confined to the contents of the standard headers &lt;float.h&gt;, &lt;iso646.h&gt;, &lt;limits.h&gt;, &lt;stdalign.h&gt;, &lt;stdarg.h&gt;, &lt;stdbool.h&gt;, &lt;stddef.h&gt;, &lt;stdint.h&gt;, and &lt;stdnoreturn.h&gt;. A conforming implementation may have extensions (including additional library functions), provided they do not alter the behavior of any strictly conforming program. </li>
+</ul> <h3 id="Explanation">Explanation</h3> <p>The standard does not define any minimum implementation limit on translation units. A hosted environment has an operating system; a freestanding environment does not. A program running in a hosted environment may use all features described in the library clause (clause 7); a program running in a freestanding environment may use a subset of library features required by clause 4.</p>
+<h3 id="References">References</h3>  <ul>
+<li> C11 standard (ISO/IEC 9899:2011): </li>
+<ul><li> 4 Conformance (p: 8-9) </li></ul>
+<li> C99 standard (ISO/IEC 9899:1999): </li>
+<ul><li> 4 Conformance (p: 7-8) </li></ul>
+<li> C89/C90 standard (ISO/IEC 9899:1990): </li>
+<ul><li> 1.7 Compliance </li></ul>
+</ul>         <h3 id="See_also">See also</h3>            <div class="_attribution">
+  <p class="_attribution-p">
+    &copy; cppreference.com<br>Licensed under the Creative Commons Attribution-ShareAlike Unported License v3.0.<br>
+    <a href="http://en.cppreference.com/w/c/language/conformance" class="_attribution-link">http://en.cppreference.com/w/c/language/conformance</a>
+  </p>
+</div>

@@ -1,0 +1,39 @@
+   <h1 id="firstHeading" class="firstHeading">memchr</h1>            <table class="t-dcl-begin"> <tr class="t-dsc-header"> <th> Defined in header <code>&lt;string.h&gt;</code> </th> <th> </th> <th> </th> </tr> <tr class="t-dcl"> <td class="t-dcl-nopad"> <pre data-language="c">void* memchr( const void* ptr, int ch, size_t count );</pre>
+</td> <td class="t-dcl-nopad"> </td> <td class="t-dcl-nopad"> </td> </tr>  </table> <p>Finds the first occurrence of <code>ch</code> (after conversion to <code>unsigned char</code> as if by <code>(unsigned char)ch</code>) in the initial <code>count</code> characters (each interpreted as <code>unsigned char</code>) of the object pointed to by <code>ptr</code>.</p>
+<p>The behavior is undefined if access occurs beyond the end of the array searched. The behavior is undefined if <code>ptr</code> is a null pointer.</p>
+<table class="t-rev-begin"> <tr class="t-rev t-since-c11">
+<td> <p>This function behaves as if it reads the characters sequentially and stops as soon as a matching character is found: if the array pointed to by <code>ptr</code> is smaller than <code>count</code>, but the match is found within the array, the behavior is well-defined.</p>
+</td> <td><span class="t-mark-rev t-since-c11">(since C11)</span></td>
+</tr> </table> <h3 id="Parameters">Parameters</h3> <table class="t-par-begin"> <tr class="t-par"> <td> ptr </td> <td> - </td> <td> pointer to the object to be examined </td>
+</tr> <tr class="t-par"> <td> ch </td> <td> - </td> <td> character to search for </td>
+</tr> <tr class="t-par"> <td> count </td> <td> - </td> <td> max number of characters to examine </td>
+</tr>
+</table> <h3 id="Return_value">Return value</h3> <p>Pointer to the location of the character, or <code><a href="../../types/null" title="c/types/NULL">NULL</a></code> if no such character is found.</p>
+<h3 id="Example">Example</h3> <div class="t-example"> <div class="c source-c"><pre data-language="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+int main(void)
+{
+    char str[] = "ABCDEFG";
+    char *ps = memchr(str,'D',strlen(str));
+    if (ps != NULL)
+       printf ("search character found:  %s\n", ps);
+    else
+       printf ("search character not found\n");
+ 
+    return 0;
+}</pre></div> <p>Output:</p>
+<div class="text source-text"><pre data-language="c">search character found:  DEFG</pre></div> </div> <h3 id="References">References</h3>  <ul>
+<li> C11 standard (ISO/IEC 9899:2011): </li>
+<ul><li> 7.24.5.1 The memchr function (p: 367) </li></ul>
+<li> C99 standard (ISO/IEC 9899:1999): </li>
+<ul><li> 7.21.5.1 The memchr function (p: 330) </li></ul>
+<li> C89/C90 standard (ISO/IEC 9899:1990): </li>
+<ul><li> 4.11.5.1 The memchr function </li></ul>
+</ul>         <h3 id="See_also">See also</h3> <table class="t-dsc-begin"> <tr class="t-dsc"> <td> <div><a href="strchr" title="c/string/byte/strchr"> <span class="t-lines"><span>strchr</span></span></a></div> </td> <td> finds the first occurrence of a character <br> <span class="t-mark">(function)</span> </td>
+</tr> </table>           <div class="_attribution">
+  <p class="_attribution-p">
+    &copy; cppreference.com<br>Licensed under the Creative Commons Attribution-ShareAlike Unported License v3.0.<br>
+    <a href="http://en.cppreference.com/w/c/string/byte/memchr" class="_attribution-link">http://en.cppreference.com/w/c/string/byte/memchr</a>
+  </p>
+</div>

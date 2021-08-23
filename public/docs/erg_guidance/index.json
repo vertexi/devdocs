@@ -1,0 +1,26 @@
+{
+    "entries": [
+        {
+            "name": "AC",
+            "path": "guidance/guidance117",
+            "type": "物质"
+        },
+        {
+            "name": "Guidance 117",
+            "path": "guidance/guidance117",
+            "type": "指南"
+        }
+    ],
+    "types": [
+        {
+            "name": "指南",
+            "count": 6,
+            "slug": "guidance"
+        },
+        {
+            "name": "物质",
+            "count": 4,
+            "slug": "material"
+        }
+    ]
+}

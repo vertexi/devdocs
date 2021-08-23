@@ -1,0 +1,22 @@
+   <h1 id="firstHeading" class="firstHeading">Source file inclusion</h1>            <p>Includes another source file into the current source file at the line immediately after the directive.</p>
+<h3 id="Syntax">Syntax</h3> <table class="t-sdsc-begin">  <tr class="t-sdsc"> <td> <code>#include &lt;</code><span class="t-spar">filename</span><code>&gt;</code> </td> <td> (1) </td> <td class="t-sdsc-nopad"> </td>
+</tr>  <tr class="t-sdsc"> <td> <code>#include "</code><span class="t-spar">filename</span><code>"</code> </td> <td> (2) </td> <td class="t-sdsc-nopad"> </td>
+</tr> 
+</table> <h3 id="Explanation">Explanation</h3> <p>Includes source file, identified by <span class="t-spar">filename</span>, into the current source file at the line immediately after the directive.</p>
+<p>1) Searches for the file in implementation-defined manner. The intent of this syntax is to search for the files under control of the implementation. Typical implementations search only standard include directories. The standard C++ library and the standard C library are implicitly included in these standard include directories. The standard include directories usually can be controlled by the user through compiler options.</p>
+<p>2) Searches for the file in implementation-defined manner. The intent of this syntax is to search for the files that are not controlled by the implementation. Typical implementations first search the directory where the current file resides and, only if the file is not found, search the standard include directories as with <span class="t-v">(1)</span>.</p>
+<p>In the case the file is not found, the program is ill-formed.</p>
+<h3 id="References">References</h3>  <ul>
+<li> C11 standard (ISO/IEC 9899:2011): </li>
+<ul><li> 6.10.2 Source file inclusion (p: 164-166) </li></ul>
+<li> C99 standard (ISO/IEC 9899:1999): </li>
+<ul><li> 6.10.2 Source file inclusion (p: 149-151) </li></ul>
+<li> C89/C90 standard (ISO/IEC 9899:1990): </li>
+<ul><li> 3.8.2 Source file inclusion </li></ul>
+</ul>         <h3 id="See_also">See also</h3> <table class="t-dsc-begin"> <tr class="t-dsc"> <td> <a href="../index" title="c/header">c/header</a> </td> <td> a list of C Standard Library header files </td>
+</tr> </table>           <div class="_attribution">
+  <p class="_attribution-p">
+    &copy; cppreference.com<br>Licensed under the Creative Commons Attribution-ShareAlike Unported License v3.0.<br>
+    <a href="http://en.cppreference.com/w/c/preprocessor/include" class="_attribution-link">http://en.cppreference.com/w/c/preprocessor/include</a>
+  </p>
+</div>
