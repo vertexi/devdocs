@@ -1,6 +1,4 @@
 #%%
-import numpy
-import pandas
 import json
 
 def tack_dict(hazard, switch):
