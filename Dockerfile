@@ -9,8 +9,6 @@ WORKDIR /
 
 RUN git config --global http.proxy $proxy_addr
 
-RUN echo 'Acquire::http::Proxy "$proxy_addr";' > /etc/apt/apt.conf
-
 RUN export http_proxy=$proxy_addr
 RUN export https_proxy=$proxy_addr
 
@@ -44,8 +42,5 @@ set incsearch\n\
 set hlsearch\n\
 set cursorline\n\
 set relativenumber\n' > /root/.vimrc
-
-RUN printf 'export http_proxy=$proxy_addr\n\
-export https_proxy=$proxy_addr\n' > /root/.bashrc
 
 EXPOSE 9292
